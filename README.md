@@ -131,3 +131,11 @@ if (enemyHealth > 0) // if the enemy-robot has health points, continue to fight
 while([Condition]) {
   statement
 }
+
+## Adjust the "LOSE" Game State
+
+Game States
+"LOSE" - Player robot's health is zero or less
+
+## Break;
+The break keyword allows us to exit the current loop.
