@@ -123,3 +123,11 @@ for (var i = 0; i < enemyNames.length; i++) {
 }
 
 ```
+
+## Battle the Combatants Until Defeated Using a while Loop
+
+if (enemyHealth > 0) // if the enemy-robot has health points, continue to fight
+
+while([Condition]) {
+  statement
+}
