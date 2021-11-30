@@ -89,3 +89,37 @@ var fight = function() {
 
 fight();
 ```
+
+## Pseudocode
+
+Game States
+"WIN" - Player robot has defeated all enemy-robots
+    * Fight all enemy-robots
+    * Defeat each enemy-robot
+"LOSE" - Player robot's health is zero or less
+
+## Declare an Array of Enemy Combatants
+
+```js
+// var enemy1 = "Roborto";
+// var enemy2 = "Amy Android";
+// var enemy3 = "Robo Trumble";
+
+//  Array
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+console.log(enemyNames); // ["Roborto", "Amy Android", "Robo Trumble"]
+console.log(enemyNames.length); // 3
+console.log(enemyNames[0]); // Roborto
+
+// for loop syntax
+for([initial expression]; [condition]; [increment expression]) {
+   statement
+}
+
+for (var i = 0; i < enemyNames.length; i++) {
+    console.log(enemyNames[i]);
+    console.log(i);
+    console.log(enemyNames[i] + " is at " + i + " index");
+}
+
+```

@@ -3,12 +3,17 @@ var playerHealth = 100;
 var playerAttack = 20;
 var playerMoney = 10;
 
-// You can also log multiple values at once like this
-console.log(playerName, playerHealth, playerAttack, playerMoney);
-
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
-var enemyAttack = 80;
+var enemyAttack = 12;
+
+// // You can also log multiple values at once like this
+// console.log(playerName, playerHealth, playerAttack, playerMoney);
+
+
+// var enemyName = "Roborto";
+// var enemyHealth = 50;
+// var enemyAttack = 80;
 
 var fight = function() {
     // Alert players that they are starting the round
@@ -21,18 +26,18 @@ var fight = function() {
     if (promptFight === "fight" || promptFight === "FIGHT") {
         // remove enemy's health by substracting the amount set in the playerAttack variable
         enemyHealth = enemyHealth - playerAttack;
-        console.log(playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining.");
+        console.log(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining.");
 
         // check enemy's health
         if (enemyHealth <= 0) {
-            alert(enemyName + " has died!");
+            alert(enemyNames + " has died!");
         } else {
-            alert(enemyName + " still has " + enemyHealth + " health left.");
+            alert(enemyNames + " still has " + enemyHealth + " health left.");
         }
 
         // remove player's health by substracting the amonut set in the enemyAttack variable
         playerHealth = playerHealth - enemyAttack;
-        console.log(enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining.");
+        console.log(enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining.");
 
         // check player's health
         if (playerHealth <= 0) {
@@ -60,4 +65,9 @@ var fight = function() {
     }
 };
 
-fight();
+// fight();
+
+// the for loop, replacing the fight() function
+for (var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
